@@ -13,11 +13,11 @@ pipeline {
         stage('Test') {
             steps {
                 sh """
-					         #!/bin/bash
-					          echo This is Integration testing
-					          sleep 5
-				           	ls -lrt
-			          """
+                     #!/bin/bash
+                     echo This is Integration testing
+		     sleep 5
+		     ls -lrt
+		 """			       
             }
         }
     }
