@@ -4,10 +4,11 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scmGit(
-                branches: [[name: '*/main']], 
-                extensions: [], 
-                userRemoteConfigs: [[url: 'https://github.com/ShaileshKalyane/public_repo.git']])
+                pwd
+                // checkout scmGit(
+                // branches: [[name: '*/main']], 
+                // extensions: [], 
+                // userRemoteConfigs: [[url: 'https://github.com/ShaileshKalyane/public_repo.git']])
             }
         }
         stage('Test') {
