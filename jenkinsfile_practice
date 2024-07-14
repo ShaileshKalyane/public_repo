@@ -1,0 +1,23 @@
+pipeline{
+    agent any
+
+    stages{
+        stage('Checkout'){
+            steps{
+                echo "Checkout stage"
+            }
+        }
+        stage('test'){
+            steps{
+                Sh '''
+                test stage
+                '''
+            }
+        }
+        stage('Deploy'){
+            steps{
+              echo "Deploy stage"  
+            }
+        }
+    }
+}
