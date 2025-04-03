@@ -1,0 +1,26 @@
+pipeline{
+    agent any{
+
+    stages{
+            stage('Checkout'){
+                steps{
+                    git branch: 'main', credentialsId: 'Maven_Key', url: 'https://github.com/ShaileshKalyane/Maven.git'
+                }
+            }
+            stage('Build'){
+                steps{
+                    sh '''
+                    ls -lrt
+                    '''
+                }
+            }
+            stage('Test'){
+                steps{
+                    sh '''
+                    pwd
+                    '''
+                }
+            }
+        }
+    }
+}
